@@ -6,13 +6,13 @@ This project provides an asynchronous system to submit IP addresses, process the
 
 ##  Features
 
-- ✅ Submit multiple IPs via REST API
-- ✅ Background processing using Celery + Redis
-- ✅ Store IP geolocation info in PostgreSQL
-- ✅ Real-time updates via Django Channels WebSocket (per-user)
-- ✅ JWT Authentication using SimpleJWT
-- ✅ WebSocket message isolation: each user only sees their own IP results
-- ✅ Unit & WebSocket testing with `pytest`
+- Submit multiple IPs via REST API
+- Background processing using Celery + Redis
+- Store IP geolocation info in PostgreSQL
+- Real-time updates via Django Channels WebSocket (per-user)
+- JWT Authentication using SimpleJWT
+- WebSocket message isolation: each user only sees their own IP results
+- Unit & WebSocket testing with `pytest`
 
 ---
 
