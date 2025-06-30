@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    command: daphne -b 0.0.0.0 -p 8000 ipinfo_project.asgi:application
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+    env_file:
+      - .env
+
+  celery:
+    build: .
+    command: celery -A ipinfo_project worker -l info
+    depends_on:
+      - redis
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
+
+  celery-beat:
+    build: .
+    command: celery -A ipinfo_project beat -l info
+    depends_on:
+      - redis
+    env_file:
+      - .env
+    volumes:
+      - .:/app

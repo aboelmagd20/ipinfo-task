@@ -31,3 +31,7 @@ workers:
 
 wstest:
 	pytest ipcheck/tests/test_ws.py
+
+
+up:
+	docker-compose up --build

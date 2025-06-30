@@ -7,10 +7,6 @@ import logging
 logger = logging.getLogger(__name__)
 
 class JWTAuthMiddleware:
-    """
-    Custom middleware to authenticate WebSocket connections using JWT.
-    Supports both query param ?token=... and Authorization header.
-    """
 
     def __init__(self, inner):
         self.inner = inner

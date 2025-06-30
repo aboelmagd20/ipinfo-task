@@ -1,5 +1,7 @@
 from django.contrib import admin
 from .models import IPInfo
+from django_celery_results.models import TaskResult
+
 
 
 @admin.register(IPInfo)
