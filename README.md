@@ -13,6 +13,7 @@ This project provides an asynchronous system to submit IP addresses, process the
 - JWT Authentication using SimpleJWT
 - WebSocket message isolation: each user only sees their own IP results
 - Unit & WebSocket testing with `pytest`
+-Docker File & Docker Compose
 
 ---
 
